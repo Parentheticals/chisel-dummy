@@ -9,14 +9,15 @@ class GCDSpec extends FreeSpec with ChiselScalatestTester {
 
   "Adder should sum two values and truncate if there is overflow" in {
     test(new Adder(16)) { dut =>
-      dut.io.input.initSource()
+      dut.io.in1.initSource()
+      dut.io.in2.initSource()
     //   dut.input.setSourceClock(dut.clock)
-      dut.io.output.initSink()
+      dut.io.out.initSink()
     //   dut.output.setSinkClock(dut.clock)
 
-    dut.io.input.in1.poke(0.U)
-    dut.io.input.in2.poke(1.U)
-    dut.io.output.out.expect(1.U)
+        dut.io.in1.poke(0.U)
+        dut.io.in2.poke(1.U)
+        dut.io.out.expect(1.U)
 
     }
   }
