@@ -5,7 +5,7 @@ import chisel3.tester._
 import org.scalatest.FreeSpec
 import chisel3.experimental.BundleLiterals._
 
-class GCDSpec extends FreeSpec with ChiselScalatestTester {
+class AdderSpec extends FreeSpec with ChiselScalatestTester {
 
   "Adder should sum two values and truncate if there is overflow" in {
     test(new Adder(16)) { dut =>
