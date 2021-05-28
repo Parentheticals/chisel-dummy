@@ -1,0 +1,22 @@
+[
+  {
+    "class":"firrtl.stage.FirrtlFileAnnotation",
+    "file":"test_run_dir/Adder_should_sum_two_values_and_truncate_if_there_is_overflow/Adder.lo.fir"
+  },
+  {
+    "class":"firrtl.transforms.CombinationalPath",
+    "sink":"~Adder|Adder>io_out",
+    "sources":[
+      "~Adder|Adder>io_in1",
+      "~Adder|Adder>io_in2"
+    ]
+  },
+  {
+    "class":"firrtl.EmitCircuitAnnotation",
+    "emitter":"firrtl.LowFirrtlEmitter"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxTargetDirAnno",
+    "targetDir":"test_run_dir/Adder_should_sum_two_values_and_truncate_if_there_is_overflow"
+  }
+]
