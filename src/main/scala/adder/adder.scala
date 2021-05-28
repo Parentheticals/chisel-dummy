@@ -18,5 +18,5 @@ class Adder(width: Int) extends Module {
         val output = IO(new AdderOutputBundle(width))
     })
 
-    io.output := io.input.in1 &+ io.input.in2
+    io.output := io.input.in1 +& io.input.in2
 }
