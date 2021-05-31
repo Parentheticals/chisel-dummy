@@ -1,10 +1,20 @@
 load /scratch/wangwang/chisel-dummy/test_run_dir/Bad_Counter/BadCounter.fir
-vcd load /scratch/wangwang/chisel-dummy/test_run_dir/Bad_Counter/BadCounter.vcd
+vcd load /scratch/wangwang/chisel-dummy/test_run_dir/Bad_Counter/BadCounter_Comp.vcd
 show outputs
 vcd run
 vcd test outputs
 vcd run
 vcd test outputs
-vcd run all
+vcd run
+vcd test outputs
+vcd run
+vcd test outputs
+vcd run
+vcd test outputs
+vcd run
+vcd test outputs
+vcd run
+vcd test outputs
+vcd run
 vcd test outputs
 quit

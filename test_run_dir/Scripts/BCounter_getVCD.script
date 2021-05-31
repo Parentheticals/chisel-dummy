@@ -1,0 +1,7 @@
+load /scratch/wangwang/chisel-dummy/test_run_dir/Bad_Counter/BadCounter.fir
+record-vcd /scratch/wangwang/chisel-dummy/test_run_dir/Bad_Counter/BadCounter.vcd
+rpeek out
+step 5
+rpeek out
+record-vcd done
+quit
