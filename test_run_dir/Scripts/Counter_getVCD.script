@@ -3,4 +3,5 @@ record-vcd /scratch/wangwang/chisel-dummy/test_run_dir/Normal_Counter/Counter.vc
 rpeek out
 step 5
 rpeek out
+record-vcd done
 quit
