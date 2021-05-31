@@ -3,18 +3,26 @@ vcd load /scratch/wangwang/chisel-dummy/test_run_dir/Bad_Counter/BadCounter_Comp
 show outputs
 vcd run
 vcd test outputs
+vcd test all
 vcd run
 vcd test outputs
+vcd test all
 vcd run
 vcd test outputs
+vcd test all
 vcd run
 vcd test outputs
+vcd test all
 vcd run
 vcd test outputs
+vcd test all
 vcd run
 vcd test outputs
+vcd test all
 vcd run
 vcd test outputs
+vcd test all
 vcd run
 vcd test outputs
+vcd test all
 quit
