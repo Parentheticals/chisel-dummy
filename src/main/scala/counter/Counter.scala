@@ -5,9 +5,10 @@ import chisel3.util._
 
 class Counter(width: Int) extends Module {
   val io = IO(new Bundle {
-    val in  = Input(UInt(width.W))
     val out = Output(UInt(width.W))
   })
   
-  io.out := RegNext(io.in + 1.U)
+  val register = RegInit(0.U(width.W))
+  register := register + 1.U
+  io.out := register
 }
