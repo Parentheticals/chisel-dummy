@@ -1,0 +1,7 @@
+load /scratch/wangwang/treadle/src/test/resources/RealGCD2.fir
+vcd load /scratch/wangwang/treadle/src/test/resources/RealGCD2.vcd
+show outputs
+show inputs
+watch + regex x
+watch + regex y
+watch + regex io_out_bits
