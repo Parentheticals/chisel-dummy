@@ -1,0 +1,70 @@
+$date
+2021-05-31T14:09+0000
+$end
+$version
+0.2
+$end
+$comment
+
+$end
+$timescale 1ns  $end
+$scope module BadCounter $end
+ $var wire 3 ! io_out $end
+ $var wire 4 " _register_T $end
+ $var wire 3 # register $end
+ $var wire 1 $ clock $end
+ $var wire 3 % _register_T_1 $end
+ $var wire 1 & reset $end
+$upscope $end
+$enddefinitions $end
+$dumpvars
+0&
+b000 #
+b000 %
+b0000 "
+0$
+b000 !
+$end
+#0
+b001 %
+b0001 "
+#1
+b001 !
+b010 %
+b0010 "
+b001 #
+1$
+#6
+0$
+#11
+b010 !
+b011 %
+b0011 "
+b010 #
+1$
+#16
+0$
+#21
+b011 !
+b100 %
+b0100 "
+b011 #
+1$
+#26
+0$
+#31
+b100 !
+b101 %
+b0101 "
+b100 #
+1$
+#36
+0$
+#41
+b101 !
+b110 %
+b0110 "
+b101 #
+1$
+#46
+0$

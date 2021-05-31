@@ -1,5 +1,5 @@
 load /scratch/wangwang/chisel-dummy/test_run_dir/Bad_Counter/BadCounter.fir
-vcd load /scratch/wangwang/chisel-dummy/test_run_dir/Normal_Counter/Counter.vcd
+vcd load /scratch/wangwang/chisel-dummy/test_run_dir/Bad_Counter/BadCounter.vcd
 show outputs
 vcd run
 vcd test outputs
