@@ -1,0 +1,29 @@
+[
+  {
+    "class":"firrtl.stage.FirrtlFileAnnotation",
+    "file":"test_run_dir/Dummy_nonFSM_test/Dummy_nonFSM.lo.fir"
+  },
+  {
+    "class":"firrtl.transforms.CombinationalPath",
+    "sink":"~Dummy_nonFSM|Dummy_nonFSM>io_in_ready",
+    "sources":[
+      "~Dummy_nonFSM|Dummy_nonFSM>io_in_valid",
+      "~Dummy_nonFSM|Dummy_nonFSM>io_out_ready"
+    ]
+  },
+  {
+    "class":"firrtl.transforms.CombinationalPath",
+    "sink":"~Dummy_nonFSM|Dummy_nonFSM>io_out_bits",
+    "sources":[
+      "~Dummy_nonFSM|Dummy_nonFSM>io_in_bits"
+    ]
+  },
+  {
+    "class":"firrtl.EmitCircuitAnnotation",
+    "emitter":"firrtl.LowFirrtlEmitter"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxTargetDirAnno",
+    "targetDir":"test_run_dir/Dummy_nonFSM_test"
+  }
+]

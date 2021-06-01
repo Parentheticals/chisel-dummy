@@ -11,9 +11,10 @@ class Dummy_nonFSM(width: Int, time: UInt) extends Module {
   })
 
   io.in.ready := !(io.in.valid && io.out.ready)
+  val enable = RegNext(io.in.ready)
 
   val counter = Counter(8)
-  when(!io.in.ready) {
+  when(!enable) {
     counter.inc()
   }
 
