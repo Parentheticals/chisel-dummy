@@ -4,9 +4,9 @@ import chisel3._
 import chisel3.util._
 
 // Stars when ready is asserted 
-class Dummy_FSM(width: Int, time: Int) extends Module {
+class Dummy_FSM(width: Int, time: UInt) extends Module {
   val io = IO(new Bundle {
-    val in = Flipped(Decoupled(Uint(width.W)))
+    val in = Flipped(Decoupled(UInt(width.W)))
     val out = Decoupled(UInt(width.W))
   })
 
@@ -20,10 +20,10 @@ class Dummy_FSM(width: Int, time: Int) extends Module {
 
   // FSM
   state := idle
-  io.in.ready := Bool(false)
-  io.out.valid := Bool(false)
+  io.in.ready := false.B
+  io.out.valid := false.B
   io.out.bits := 0.U
-  en_counter := Bool(false)
+  en_counter := false.B
 
   switch (state) {
     // Case of IDLE
@@ -31,15 +31,15 @@ class Dummy_FSM(width: Int, time: Int) extends Module {
       when (io.in.valid && io.out.ready) {
         state := stuff
       }.otherwise {
-        io.in.ready := Bool(true)
+        io.in.ready := true.B
       }
     }
     // Case of STUFF
     is (stuff) {
-      when (counter === UInt(time)) {
+      when (counter.value === time) {
         state := done
       }.otherwise {
-        en_counter := Bool(true)
+        en_counter := true.B
       }
     }
     // Case of Done
