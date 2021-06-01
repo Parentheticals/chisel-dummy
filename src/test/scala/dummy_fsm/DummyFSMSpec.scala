@@ -7,7 +7,7 @@ import chisel3.experimental.BundleLiterals._
 
 class DummyFSMSpec extends FreeSpec with ChiselScalatestTester {
   "Dummy FSM test" in {
-    test(new dummy_fsm(4, 6)) { dut =>
+    test(new Dummy_FSM(4, 6)) { dut =>
         dut.io.out.ready.poke(false.B)
         dut.io.in.valid.poke(false.B)
         dut.clock.step(3)
