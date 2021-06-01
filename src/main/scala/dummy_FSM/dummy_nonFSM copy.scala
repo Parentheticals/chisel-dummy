@@ -17,7 +17,7 @@ class Dummy_nonFSM(width: Int, time: UInt) extends Module {
     counter.inc()
   }
 
-  when(counter.value === time) {
+  when(counter.value === time + 1.U) {
     counter.reset()
     io.out.bits := io.in.bits + 1.U
     io.out.valid := true.B
