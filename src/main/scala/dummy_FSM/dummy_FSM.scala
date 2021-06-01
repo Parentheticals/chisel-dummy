@@ -54,5 +54,7 @@ class Dummy_FSM(width: Int, time: UInt) extends Module {
   val counter = Counter(3)
   when (en_counter) {
     counter.inc()
+  }. otherwise {
+    counter.reset()
   }
 }
