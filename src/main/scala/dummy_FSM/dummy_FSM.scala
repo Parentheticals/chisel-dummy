@@ -46,7 +46,7 @@ class Dummy_FSM(width: Int, time: UInt) extends Module {
     is (done) {
       state := idle
       io.out.bits := io.in.bits + 1.U
-      io.out.valid := Bool(true)
+      io.out.valid := true.B
       counter.reset()
     }
   }
