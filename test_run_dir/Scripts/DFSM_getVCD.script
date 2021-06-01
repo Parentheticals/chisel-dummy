@@ -3,7 +3,7 @@ record-vcd /scratch/wangwang/chisel-dummy/test_run_dir/Dummy_FSM_test/Dummy_FSM.
 poke io_in_valid 1
 poke io_out_ready 1
 poke io_in_bits 6
-step 9
+step 8
 peek io_out_bits
 peek io_out_valid
 record-vcd done

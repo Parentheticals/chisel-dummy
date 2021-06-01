@@ -37,6 +37,7 @@ class Dummy_FSM(width: Int, time: UInt) extends Module {
     is (idle) {
       when (io.in.valid && io.out.ready) {
         state := stuff
+        en_counter := true.B
       }.otherwise {
         io.in.ready := true.B
       }
