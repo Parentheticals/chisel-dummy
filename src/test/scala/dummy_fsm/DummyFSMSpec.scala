@@ -16,9 +16,16 @@ class DummyFSMSpec extends FreeSpec with ChiselScalatestTester {
         dut.io.in.valid.poke(true.B)
         dut.io.in.bits.poke(2.U)
         // wait to finish
-        dut.clock.step(7)
+        for (i <- 0 until 8) {
+          dut.clock.step(1)
+          dut.io.out.valid.expect(false.B)
+        }
+        dut.clock.step(1)
         dut.io.out.bits.expect(3.U)
         dut.io.out.valid.expect(true.B)
+        dut.clock.step(1)
+        dut.io.out.bits.expect(0.U)
+        dut.io.out.valid.expect(false.B)
     }
   }
 }

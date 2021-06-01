@@ -16,14 +16,21 @@ class Dummy_FSM(width: Int, time: UInt) extends Module {
   val state = RegInit(UInt(2.W), idle)
 
   // Wires
-  val en_counter = Wire(Bool())
+  val en_counter = Reg(Bool())
 
   // FSM
   state := idle
   io.in.ready := false.B
-  io.out.valid := false.B
   io.out.bits := 0.U
+  io.out.valid := false.B
   en_counter := false.B
+
+  val counter = Counter(8)
+  when (en_counter) {
+    counter.inc()
+  }. otherwise {
+    counter.reset()
+  }
 
   switch (state) {
     // Case of IDLE
@@ -39,6 +46,7 @@ class Dummy_FSM(width: Int, time: UInt) extends Module {
       when (counter.value === time) {
         state := done
       }.otherwise {
+        state := stuff
         en_counter := true.B
       }
     }
@@ -49,12 +57,5 @@ class Dummy_FSM(width: Int, time: UInt) extends Module {
       io.out.valid := true.B
       counter.reset()
     }
-  }
-  
-  val counter = Counter(3)
-  when (en_counter) {
-    counter.inc()
-  }. otherwise {
-    counter.reset()
   }
 }
