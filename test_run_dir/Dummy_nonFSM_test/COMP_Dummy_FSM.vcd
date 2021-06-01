@@ -1,0 +1,194 @@
+$date
+2021-06-01T12:41+0000
+$end
+$version
+0.2
+$end
+$comment
+
+$end
+$timescale 1ns  $end
+$scope module Dummy_nonFSM $end
+ $var wire 2 ! _GEN_10 $end
+ $var wire 1 " io_in_ready $end
+ $var wire 4 # _value_T $end
+ $var wire 1 $ _T $end
+ $var wire 1 % io_out_ready $end
+ $var wire 1 & _GEN_5 $end
+ $var wire 1 ' _GEN_13 $end
+ $var wire 2 ( state $end
+ $var wire 4 ) _GEN_12 $end
+ $var wire 2 * _GEN_15 $end
+ $var wire 4 + _GEN_7 $end
+ $var wire 4 , io_out_bits $end
+ $var wire 2 - _GEN_1 $end
+ $var wire 3 . value $end
+ $var wire 2 / _GEN_4 $end
+ $var wire 1 0 clock $end
+ $var wire 1 1 io_in_valid $end
+ $var wire 1 2 en_counter $end
+ $var wire 1 3 io_out_valid $end
+ $var wire 1 4 _GEN_11 $end
+ $var wire 4 5 _io_out_bits_T_1 $end
+ $var wire 3 6 _GEN_20 $end
+ $var wire 3 7 _value_T_1 $end
+ $var wire 3 8 _GEN_14 $end
+ $var wire 3 9 _GEN_0 $end
+ $var wire 5 : _io_out_bits_T $end
+ $var wire 3 ; _GEN_9 $end
+ $var wire 4 < io_in_bits $end
+ $var wire 1 = reset $end
+ $var wire 1 > _GEN_3 $end
+$upscope $end
+$enddefinitions $end
+$dumpvars
+0%
+b0000 <
+0&
+0'
+b00 (
+b0000 )
+0=
+0>
+b00 *
+b0000 #
+0"
+b000 .
+02
+03
+b0000 5
+04
+b000 8
+b00 !
+b000 9
+b00000 :
+b00 /
+b000 ;
+00
+01
+b0000 +
+b000 6
+b0000 ,
+b000 7
+b00 -
+0$
+$end
+#0
+b01 -
+b0110 <
+1%
+11
+1&
+b0111 5
+b0001 #
+b01 *
+1$
+b00111 :
+b001 7
+b01 /
+#1
+b01 !
+10
+14
+b001 8
+12
+b001 9
+0$
+b001 6
+b01 (
+b001 ;
+#6
+00
+#11
+10
+b001 .
+b010 8
+b0010 #
+b010 9
+b010 6
+b010 7
+b010 ;
+#16
+00
+#21
+10
+b010 .
+b011 8
+b0011 #
+b011 9
+b011 6
+b011 7
+b011 ;
+#26
+00
+#31
+10
+b011 .
+b100 8
+b0100 #
+b100 9
+b100 6
+b100 7
+b100 ;
+#36
+00
+#41
+10
+b100 .
+b101 8
+b0101 #
+b101 9
+b101 6
+b101 7
+b101 ;
+#46
+00
+#51
+10
+b101 .
+b110 8
+b0110 #
+b110 9
+b110 6
+b110 7
+b110 ;
+#56
+00
+#61
+b10 !
+10
+04
+b110 .
+0&
+b0111 #
+b111 8
+b10 *
+b111 9
+b111 6
+b111 7
+b10 /
+b111 ;
+#66
+00
+#71
+13
+b111 .
+1&
+1'
+b000 6
+b10 (
+b000 7
+b01 /
+b0111 )
+b00 !
+10
+b000 8
+b1000 #
+02
+b00 *
+b000 9
+b0111 +
+b0111 ,
+b000 ;
+#76
+00
