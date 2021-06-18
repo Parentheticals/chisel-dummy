@@ -1,0 +1,35 @@
+[
+  {
+    "class":"firrtl.stage.FirrtlFileAnnotation",
+    "file":"/scratch/wangwang/chisel_dummy/test_run_dir/FIRFilter_test/FIRFilter.fir"
+  },
+  {
+    "class":"firrtl.transforms.CombinationalPath",
+    "sink":"~FIRFilter|FIRFilter>io_out",
+    "sources":[
+      "~FIRFilter|FIRFilter>io_consts_6",
+      "~FIRFilter|FIRFilter>io_consts_5",
+      "~FIRFilter|FIRFilter>io_consts_4",
+      "~FIRFilter|FIRFilter>io_consts_3",
+      "~FIRFilter|FIRFilter>io_consts_2",
+      "~FIRFilter|FIRFilter>io_in",
+      "~FIRFilter|FIRFilter>io_consts_0",
+      "~FIRFilter|FIRFilter>io_consts_1"
+    ]
+  },
+  {
+    "class":"firrtl.EmitCircuitAnnotation",
+    "emitter":"firrtl.LowFirrtlEmitter"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxTargetDirAnno",
+    "targetDir":"test_run_dir/FIRFilter_test"
+  },
+  {
+    "class":"firrtl.transforms.generator.ConstrainedSimulationAnnotation",
+    "outputFilePath":"/scratch/wangwang/gen_constraint/outputs/",
+    "csvFileToDriveInputs":"/scratch/wangwang/gen_constraint/inputs/FIRFilter_inputs.csv",
+    "numStepsToWaitForValid":10,
+    "getOutputNames":false
+  }
+]

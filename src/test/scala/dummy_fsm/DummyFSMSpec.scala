@@ -19,14 +19,14 @@ class DummyFSMSpec extends FreeSpec with ChiselScalatestTester {
         for (i <- 0 until 7) {
           dut.clock.step(1)
           dut.io.out.valid.expect(false.B)
-          println("bits are: " + dut.io.out.bits.peek() + "\n")
+          // println("bits are: " + dut.io.out.bits.peek() + "\n")
         }
         dut.clock.step(1)
-        println("bits are: " + dut.io.out.bits.peek() + "\n")
+        // println("bits are: " + dut.io.out.bits.peek() + "\n")
         dut.io.out.bits.expect(3.U)
         dut.io.out.valid.expect(true.B)
         dut.clock.step(1)
-        println("bits are: " + dut.io.out.bits.peek() + "\n")
+        // println("bits are: " + dut.io.out.bits.peek() + "\n")
         dut.io.out.valid.expect(false.B)
     }
   }

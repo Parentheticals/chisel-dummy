@@ -1,0 +1,22 @@
+[
+  {
+    "class":"firrtl.stage.FirrtlFileAnnotation",
+    "file":"/scratch/wangwang/chisel_dummy/test_run_dir/Sorter_test/Sorter.fir"
+  },
+  {
+    "class":"firrtl.EmitCircuitAnnotation",
+    "emitter":"firrtl.LowFirrtlEmitter"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxTargetDirAnno",
+    "targetDir":"test_run_dir/Sorter_test"
+  },
+  {
+    "class":"firrtl.transforms.generator.ConstrainedSimulationAnnotation",
+    "outputFilePath":"/scratch/wangwang/gen_constraint/outputs/",
+    "csvFileToDriveInputs":"/scratch/wangwang/gen_constraint/inputs/sorter_inputs.csv",
+    "numStepsToWaitForValid":1,
+    "getOutputNames":false
+  }
+
+]
