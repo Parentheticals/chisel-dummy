@@ -23,7 +23,7 @@ class SorterSpec extends FreeSpec with ChiselScalatestTester{
         peekatout(dut)
       }
 
-      println("Should have ended")
+      // println("Should have ended")
 
       dut.io.out.ready.poke(false.B)
 
@@ -41,7 +41,7 @@ class SorterSpec extends FreeSpec with ChiselScalatestTester{
   }
 
   def peekatout(dut: Sorter): Unit = {
-    print("valid: " + dut.io.out.valid.peek() + " with value: " + dut.io.out.bits.peek().litValue().intValue() + "\n")
+    // print("valid: " + dut.io.out.valid.peek() + " with value: " + dut.io.out.bits.peek().litValue().intValue() + "\n")
     dut.clock.step(1)
   }
 }

@@ -11,6 +11,7 @@ class Sorter(width: Int, length: Int) extends Module {
 
   val full = Reg(Bool())
   val first = RegInit(true.B)
+
   full := false.B
 
   val nums = Seq.fill(length + 1)(RegInit(UInt(width.W), 0.U))

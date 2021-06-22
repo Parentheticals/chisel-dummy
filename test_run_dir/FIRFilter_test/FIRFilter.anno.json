@@ -1,7 +1,7 @@
 [
   {
     "class":"firrtl.stage.FirrtlFileAnnotation",
-    "file":"/scratch/wangwang/chisel_dummy/test_run_dir/FIRFilter_test/FIRFilter.fir"
+    "file":"test_run_dir/FIRFilter_test/FIRFilter.lo.fir"
   },
   {
     "class":"firrtl.transforms.CombinationalPath",
@@ -24,12 +24,5 @@
   {
     "class":"firrtl.transforms.BlackBoxTargetDirAnno",
     "targetDir":"test_run_dir/FIRFilter_test"
-  },
-  {
-    "class":"firrtl.transforms.generator.ConstrainedSimulationAnnotation",
-    "outputFilePath":"/scratch/wangwang/gen_constraint/outputs/",
-    "csvFileToDriveInputs":"/scratch/wangwang/gen_constraint/inputs/FIRFilter_inputs.csv",
-    "numStepsToWaitForValid":10,
-    "getOutputNames":false
   }
 ]
