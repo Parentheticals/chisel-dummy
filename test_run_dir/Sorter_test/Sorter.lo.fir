@@ -10,7 +10,7 @@ circuit Sorter :
     output io_out_bits : UInt<5>
 
     reg full : UInt<1>, clock with :
-      reset => (UInt<1>("h0"), full) @[Sorter.scala 12:17]
+      reset => (UInt<1>("h0"), full) @[Sorter.scala 12:21]
     reg first : UInt<1>, clock with :
       reset => (UInt<1>("h0"), first) @[Sorter.scala 13:22]
     reg nums_0 : UInt<5>, clock with :
@@ -191,7 +191,7 @@ circuit Sorter :
     io_in_ready <= _io_in_ready_T @[Sorter.scala 79:15]
     io_out_valid <= full @[Sorter.scala 78:16]
     io_out_bits <= nums_7 @[Sorter.scala 77:15]
-    full <= _GEN_55
+    full <= mux(reset, UInt<1>("h0"), _GEN_55) @[Sorter.scala 12:21 Sorter.scala 12:21]
     first <= mux(reset, UInt<1>("h1"), _GEN_56) @[Sorter.scala 13:22 Sorter.scala 13:22]
     nums_0 <= mux(reset, UInt<1>("h0"), nums_0) @[Sorter.scala 17:42 Sorter.scala 17:42 Sorter.scala 17:42]
     nums_1 <= mux(reset, UInt<1>("h0"), _GEN_35) @[Sorter.scala 17:42 Sorter.scala 17:42]

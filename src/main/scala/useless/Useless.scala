@@ -32,12 +32,12 @@ class Useless(width: Int) extends Module {
   when (io.a.valid) {
     io.op(0) := c_num0 + c_b
     io.op(1) := c_num1 + c_b
-    io.a.ready := 0.U
   }.otherwise{
     io.op(0) := c_b
     io.op(1) := c_b
-    io.a.ready := 1.U
   }
+
+  io.a.ready := 1.U
 
   // Second part of the circuit
 

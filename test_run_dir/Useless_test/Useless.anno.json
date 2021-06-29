@@ -1,7 +1,7 @@
 [
   {
     "class":"firrtl.stage.FirrtlFileAnnotation",
-    "file":"/scratch/wangwang/chisel_dummy/test_run_dir/Useless_test/Useless.lo.fir"
+    "file":"test_run_dir/Useless_test/Useless.lo.fir"
   },
   {
     "class":"firrtl.transforms.CombinationalPath",
@@ -14,13 +14,6 @@
       "~Useless|Useless>io_a_bits_num0_2",
       "~Useless|Useless>io_a_bits_num0_0",
       "~Useless|Useless>io_a_bits_num0_1"
-    ]
-  },
-  {
-    "class":"firrtl.transforms.CombinationalPath",
-    "sink":"~Useless|Useless>io_a_ready",
-    "sources":[
-      "~Useless|Useless>io_a_valid"
     ]
   },
   {
@@ -43,59 +36,5 @@
   {
     "class":"firrtl.transforms.BlackBoxTargetDirAnno",
     "targetDir":"test_run_dir/Useless_test"
-  },
-  {
-    "class":"firrtl.transforms.generator.SimulationAnnotation",
-    "randomizedSimulation":true,
-    "randomSeed":420960,
-    "numberOfTests":3,
-    "inputDataCSVFileOutputPath":"/scratch/wangwang/generated/Useless/rand/in/",
-    "outputDataCSVFileOutputPath":"/scratch/wangwang/generated/Useless/rand/out/"
-  },
-  {
-    "class":"firrtl.transforms.generator.SimulationAnnotation",
-    "randomizedSimulation":false,
-    "outputDataCSVFileOutputPath":"/scratch/wangwang/generated/Useless/cons/out/"
-  },
-  {
-    "class":"firrtl.transforms.generator.DecoupledInputAnnotation",
-    "valid":"io_a_valid",
-    "ready":"io_a_ready",
-    "bits":[
-      "io_a_bits_num0_0",
-      "io_a_bits_num0_1",
-      "io_a_bits_num0_2",
-      "io_a_bits_num1_0",
-      "io_a_bits_num1_1",
-      "io_a_bits_num1_2",
-    ],
-    "csvFileDriveBits":"/scratch/wangwang/generated/Useless/cons/in/useless_a.csv"
-  },
-  {
-    "class":"firrtl.transforms.generator.DecoupledInputAnnotation",
-    "valid":null,
-    "ready":"io_rdy_b",
-    "bits":[
-      "io_b_0",
-      "io_b_1",
-      "io_b_2",
-    ],
-    "csvFileDriveBits":"/scratch/wangwang/generated/Useless/cons/in/useless_b.csv"
-  },
-  {
-    "class":"firrtl.transforms.generator.DecoupledOutputAnnotation",
-    "outputFileName":"delayed",
-    "valid":"io_vld_delay",
-    "ready":null,
-    "bits":[
-      "io_delayed_0",
-      "io_delayed_1"
-    ],
-    "expectedNumberOfOutputs":10
-  },
-  {
-    "class":"firrtl.transforms.generator.NonDecoupledOutputAnnotation",
-    "outputFileName":"operation",
-    "expectedNumberOfOutputs":13
   }
 ]

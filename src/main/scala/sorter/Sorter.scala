@@ -9,7 +9,7 @@ class Sorter(width: Int, length: Int) extends Module {
     val out = Decoupled(UInt(width.W))
   })
 
-  val full = Reg(Bool())
+  val full = RegInit(false.B)
   val first = RegInit(true.B)
 
   full := false.B

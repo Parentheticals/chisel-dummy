@@ -5,7 +5,7 @@ circuit Sorter :
     input reset : UInt<1>
     output io : {flip in : {flip ready : UInt<1>, valid : UInt<1>, bits : UInt<5>}, out : {flip ready : UInt<1>, valid : UInt<1>, bits : UInt<5>}}
     
-    reg full : UInt<1>, clock @[Sorter.scala 12:17]
+    reg full : UInt<1>, clock with : (reset => (reset, UInt<1>("h00"))) @[Sorter.scala 12:21]
     reg first : UInt<1>, clock with : (reset => (reset, UInt<1>("h01"))) @[Sorter.scala 13:22]
     full <= UInt<1>("h00") @[Sorter.scala 15:8]
     reg nums_0 : UInt<5>, clock with : (reset => (reset, UInt<1>("h00"))) @[Sorter.scala 17:42]
