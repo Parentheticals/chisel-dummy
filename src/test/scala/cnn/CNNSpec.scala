@@ -10,9 +10,9 @@ import scala.util.Random
 
 class CNNSpec extends FreeSpec with ChiselScalatestTester{
   "CNN Test" in {
-    val inputs = 4
-    val width = 7
-    val numLayer = 2
+    val inputs = 2
+    val width = 3
+    val numLayer = 3
     val ReLU: SInt => SInt = x => Mux(x <= 0.S, 0.S, x)
 
     val weights: ArrayBuffer[ArrayBuffer[ArrayBuffer[SInt]]] = ArrayBuffer[ArrayBuffer[ArrayBuffer[SInt]]]()

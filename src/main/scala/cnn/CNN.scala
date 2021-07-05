@@ -66,28 +66,28 @@ class CNN(inputs: Int, width: Int, numLayers: Int, act: SInt => SInt) extends Mo
   reg_vld := io.vld_in
   io.vld_out := reg_vld
 
-
-  printf("Input Values\n")
-  for (bits <- io.in){
-    printf("%d ", bits)
-  }
-  printf("\nWeights\n")
-  for (w0 <- io.weights) {
-    for (w1 <- w0) {
-      for (w2 <- w1){
-        printf("%d ", w2)
-      }
-      printf("| ")
-    }
-    printf("\n")
-  }
-  printf("Output Values\n")
-  for (layer <- network){
-    for (neuron <- layer) {
-      printf("%d ", neuron.io.out)
-    }
-    printf("\n")
-  }
-  printf("\n")
+//
+//  printf("Input Values\n")
+//  for (bits <- io.in){
+//    printf("%d ", bits)
+//  }
+//  printf("\nWeights\n")
+//  for (w0 <- io.weights) {
+//    for (w1 <- w0) {
+//      for (w2 <- w1){
+//        printf("%d ", w2)
+//      }
+//      printf("| ")
+//    }
+//    printf("\n")
+//  }
+//  printf("Output Values\n")
+//  for (layer <- network){
+//    for (neuron <- layer) {
+//      printf("%d ", neuron.io.out)
+//    }
+//    printf("\n")
+//  }
+//  printf("\n")
 
 }
