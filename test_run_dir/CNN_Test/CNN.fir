@@ -3,7 +3,7 @@ circuit CNN :
   module Neuron : 
     input clock : Clock
     input reset : Reset
-    output io : {flip in : SInt<3>[2], flip weights : SInt<3>[2], out : SInt<3>}
+    output io : {flip in : SInt<300>[2], flip weights : SInt<300>[2], out : SInt<300>}
     
     node _mac_T = mul(io.in[0], io.weights[0]) @[CNN.scala 14:65]
     node _mac_T_1 = mul(io.in[1], io.weights[1]) @[CNN.scala 14:65]
@@ -17,7 +17,7 @@ circuit CNN :
   module Neuron_1 : 
     input clock : Clock
     input reset : Reset
-    output io : {flip in : SInt<3>[2], flip weights : SInt<3>[2], out : SInt<3>}
+    output io : {flip in : SInt<300>[2], flip weights : SInt<300>[2], out : SInt<300>}
     
     node _mac_T = mul(io.in[0], io.weights[0]) @[CNN.scala 14:65]
     node _mac_T_1 = mul(io.in[1], io.weights[1]) @[CNN.scala 14:65]
@@ -31,7 +31,7 @@ circuit CNN :
   module Neuron_2 : 
     input clock : Clock
     input reset : Reset
-    output io : {flip in : SInt<3>[2], flip weights : SInt<3>[2], out : SInt<3>}
+    output io : {flip in : SInt<300>[2], flip weights : SInt<300>[2], out : SInt<300>}
     
     node _mac_T = mul(io.in[0], io.weights[0]) @[CNN.scala 14:65]
     node _mac_T_1 = mul(io.in[1], io.weights[1]) @[CNN.scala 14:65]
@@ -45,7 +45,7 @@ circuit CNN :
   module Neuron_3 : 
     input clock : Clock
     input reset : Reset
-    output io : {flip in : SInt<3>[2], flip weights : SInt<3>[2], out : SInt<3>}
+    output io : {flip in : SInt<300>[2], flip weights : SInt<300>[2], out : SInt<300>}
     
     node _mac_T = mul(io.in[0], io.weights[0]) @[CNN.scala 14:65]
     node _mac_T_1 = mul(io.in[1], io.weights[1]) @[CNN.scala 14:65]
@@ -59,7 +59,7 @@ circuit CNN :
   module Neuron_4 : 
     input clock : Clock
     input reset : Reset
-    output io : {flip in : SInt<3>[2], flip weights : SInt<3>[2], out : SInt<3>}
+    output io : {flip in : SInt<300>[2], flip weights : SInt<300>[2], out : SInt<300>}
     
     node _mac_T = mul(io.in[0], io.weights[0]) @[CNN.scala 14:65]
     node _mac_T_1 = mul(io.in[1], io.weights[1]) @[CNN.scala 14:65]
@@ -73,7 +73,7 @@ circuit CNN :
   module Neuron_5 : 
     input clock : Clock
     input reset : Reset
-    output io : {flip in : SInt<3>[2], flip weights : SInt<3>[2], out : SInt<3>}
+    output io : {flip in : SInt<300>[2], flip weights : SInt<300>[2], out : SInt<300>}
     
     node _mac_T = mul(io.in[0], io.weights[0]) @[CNN.scala 14:65]
     node _mac_T_1 = mul(io.in[1], io.weights[1]) @[CNN.scala 14:65]
@@ -87,7 +87,7 @@ circuit CNN :
   module CNN : 
     input clock : Clock
     input reset : UInt<1>
-    output io : {flip in : SInt<3>[2], flip vld_in : UInt<1>, flip weights : SInt<3>[2][2][3], out : SInt<3>[2], vld_out : UInt<1>}
+    output io : {flip in : SInt<300>[2], flip vld_in : UInt<1>, flip weights : SInt<300>[2][2][3], out : SInt<300>[2], vld_out : UInt<1>}
     
     inst network_0_0 of Neuron @[CNN.scala 28:78]
     network_0_0.clock <= clock
@@ -131,8 +131,8 @@ circuit CNN :
     network_2_1.io.in[1] <= network_1_1.io.out @[CNN.scala 45:24]
     network_2_1.io.weights[0] <= io.weights[2][1][0] @[CNN.scala 46:29]
     network_2_1.io.weights[1] <= io.weights[2][1][1] @[CNN.scala 46:29]
-    reg reg_0 : SInt<3>, clock with : (reset => (reset, asSInt(UInt<3>("h00")))) @[CNN.scala 54:37]
-    reg reg_1 : SInt<3>, clock with : (reset => (reset, asSInt(UInt<3>("h00")))) @[CNN.scala 54:37]
+    reg reg_0 : SInt<300>, clock with : (reset => (reset, asSInt(UInt<300>("h00")))) @[CNN.scala 54:37]
+    reg reg_1 : SInt<300>, clock with : (reset => (reset, asSInt(UInt<300>("h00")))) @[CNN.scala 54:37]
     reg_0 <= network_2_0.io.out @[CNN.scala 59:14]
     reg_0 <= network_2_1.io.out @[CNN.scala 59:14]
     io.out[0] <= reg_0 @[CNN.scala 63:10]

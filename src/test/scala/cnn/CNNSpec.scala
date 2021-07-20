@@ -11,7 +11,7 @@ import scala.util.Random
 class CNNSpec extends FreeSpec with ChiselScalatestTester{
   "CNN Test" in {
     val inputs = 2
-    val width = 3
+    val width = 300
     val numLayer = 3
     val ReLU: SInt => SInt = x => Mux(x <= 0.S, 0.S, x)
 
@@ -25,9 +25,9 @@ class CNNSpec extends FreeSpec with ChiselScalatestTester{
           for (k <- 0 until inputs) {
             val max = pow(2, width).intValue()
             val in = if (r.nextBoolean()) {
-              r.nextInt(max)
+              BigInt(width, r)
             } else {
-              -r.nextInt(max)
+              -BigInt(width, r)
             }
             dut.io.weights(i)(j)(k).poke(in.S)
           }
@@ -39,9 +39,9 @@ class CNNSpec extends FreeSpec with ChiselScalatestTester{
       dut.io.in.foreach{in =>
         val max = pow(2, width).intValue()
         val value = if (r.nextBoolean()) {
-          r.nextInt(max)
+          BigInt(width, r)
         } else {
-          -r.nextInt(max)
+          -BigInt(width, r)
         }
         in.poke(value.S)
       }

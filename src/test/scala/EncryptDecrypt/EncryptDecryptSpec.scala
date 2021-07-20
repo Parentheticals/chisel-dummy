@@ -20,18 +20,17 @@ class EncryptDecryptSpec extends FreeSpec with ChiselScalatestTester{
     for (_ <- 0 until n) {
       var builder = ArrayBuffer[UInt]()
       for (_ <- 0 until cells) {
-        val max = pow(2, width).intValue()
-        builder += (r.nextInt(max)).U
+        builder += BigInt(width, r).U
       }
       toenc += builder
     }
   }
 
   "EncDec test" in {
-    val cells = 20
-    val widthPerCell = 7
-    val depth = 6
-    val numInputs = 30
+    val cells = 10
+    val widthPerCell = 256
+    val depth = 2
+    val numInputs = 3
     test(new EncryptDecrypt(cells, widthPerCell, depth)) { dut =>
       dut.io.out.ready.poke(true.B)
       dut.io.in.valid.poke(true.B)

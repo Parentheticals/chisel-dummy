@@ -37,12 +37,30 @@ class Mult_D_PrimOp(width: Int) extends Module {
 
   // First Layer
   val l0_0 = Module(new D_PrimOp_1(width, Prim.add))
+  val l0_1 = Module(new D_PrimOp_1(width, Prim.mul))
+  val l0_2 = Module(new D_PrimOp_1(width, Prim.sub))
 
   // Connections
   conn(io.a, io.b, l0_0)
+  conn(io.a, io.b, l0_1)
+  conn(io.a, io.b, l0_2)
+
+  // Second Layer
+  val l1_0 = Module(new D_PrimOp_1(width, Prim.add))
+  val l1_1 = Module(new D_PrimOp_1(width, Prim.mod))
+
+  // Connections
+  conn(l0_0.io.out, l0_1.io.out, l1_0)
+  conn(l0_2.io.out, l0_1.io.out, l1_1)
 
   // The last connection
-  io.out <> l0_0.io.out
+  when (io.a.valid && io.b.valid) {
+    io.out <> l1_0.io.out
+    l1_1.io.out.ready := io.out.ready
+  }.otherwise{
+    io.out <> l1_1.io.out
+    l1_0.io.out.ready := io.out.ready
+  }
 
 //  printf("\nIteration")
 //  printf("\nSum: %d\n", io.out.bits)

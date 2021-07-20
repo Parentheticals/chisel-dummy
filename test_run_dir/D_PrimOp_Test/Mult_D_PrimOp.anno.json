@@ -4,6 +4,64 @@
     "file":"test_run_dir/D_PrimOp_Test/Mult_D_PrimOp.lo.fir"
   },
   {
+    "class":"firrtl.transforms.CombinationalPath",
+    "sink":"~Mult_D_PrimOp|Mult_D_PrimOp>io_out_valid",
+    "sources":[
+      "~Mult_D_PrimOp|Mult_D_PrimOp>io_a_valid",
+      "~Mult_D_PrimOp|Mult_D_PrimOp>io_b_valid"
+    ]
+  },
+  {
+    "class":"firrtl.transforms.CombinationalPath",
+    "sink":"~Mult_D_PrimOp|Mult_D_PrimOp>io_out_bits",
+    "sources":[
+      "~Mult_D_PrimOp|Mult_D_PrimOp>io_a_valid",
+      "~Mult_D_PrimOp|Mult_D_PrimOp>io_b_valid"
+    ]
+  },
+  {
+    "class":"firrtl.transforms.DedupedResult",
+    "original":"~Mult_D_PrimOp|EB_two",
+    "duplicate":"~Mult_D_PrimOp|Mult_D_PrimOp/l0_0:D_PrimOp_1/EB:EB_two",
+    "index":0.0
+  },
+  {
+    "class":"firrtl.transforms.DedupedResult",
+    "original":"~Mult_D_PrimOp|D_PrimOp_1",
+    "duplicate":"~Mult_D_PrimOp|Mult_D_PrimOp/l0_0:D_PrimOp_1",
+    "index":0.1
+  },
+  {
+    "class":"firrtl.transforms.DedupedResult",
+    "original":"~Mult_D_PrimOp|EB_two_1",
+    "duplicate":"~Mult_D_PrimOp|Mult_D_PrimOp/l0_1:D_PrimOp_1_1/EB:EB_two",
+    "index":0.2
+  },
+  {
+    "class":"firrtl.transforms.DedupedResult",
+    "original":"~Mult_D_PrimOp|EB_two_2",
+    "duplicate":"~Mult_D_PrimOp|Mult_D_PrimOp/l0_2:D_PrimOp_1_2/EB:EB_two",
+    "index":0.4
+  },
+  {
+    "class":"firrtl.transforms.DedupedResult",
+    "original":"~Mult_D_PrimOp|EB_two_3",
+    "duplicate":"~Mult_D_PrimOp|Mult_D_PrimOp/l1_0:D_PrimOp_1/EB:EB_two",
+    "index":0.6
+  },
+  {
+    "class":"firrtl.transforms.DedupedResult",
+    "original":"~Mult_D_PrimOp|D_PrimOp_1_3",
+    "duplicate":"~Mult_D_PrimOp|Mult_D_PrimOp/l1_0:D_PrimOp_1",
+    "index":0.7
+  },
+  {
+    "class":"firrtl.transforms.DedupedResult",
+    "original":"~Mult_D_PrimOp|EB_two_4",
+    "duplicate":"~Mult_D_PrimOp|Mult_D_PrimOp/l1_1:D_PrimOp_1_4/EB:EB_two",
+    "index":0.8
+  },
+  {
     "class":"firrtl.EmitCircuitAnnotation",
     "emitter":"firrtl.LowFirrtlEmitter"
   },
