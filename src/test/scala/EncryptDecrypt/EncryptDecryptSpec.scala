@@ -28,7 +28,7 @@ class EncryptDecryptSpec extends FreeSpec with ChiselScalatestTester{
 
   "EncDec test" in {
     val cells = 10
-    val widthPerCell = 256
+    val widthPerCell = 5
     val depth = 2
     val numInputs = 3
     test(new EncryptDecrypt(cells, widthPerCell, depth)) { dut =>

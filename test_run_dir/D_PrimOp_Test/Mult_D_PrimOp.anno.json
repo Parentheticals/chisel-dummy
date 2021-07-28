@@ -21,45 +21,99 @@
   },
   {
     "class":"firrtl.transforms.DedupedResult",
-    "original":"~Mult_D_PrimOp|EB_two",
-    "duplicate":"~Mult_D_PrimOp|Mult_D_PrimOp/l0_0:D_PrimOp_1/EB:EB_two",
+    "original":"~Mult_D_PrimOp|EB_one",
+    "duplicate":"~Mult_D_PrimOp|Mult_D_PrimOp/l0_0:D_PrimOp_1/EB:EB_one",
     "index":0.0
   },
   {
     "class":"firrtl.transforms.DedupedResult",
     "original":"~Mult_D_PrimOp|D_PrimOp_1",
     "duplicate":"~Mult_D_PrimOp|Mult_D_PrimOp/l0_0:D_PrimOp_1",
+    "index":0.05
+  },
+  {
+    "class":"firrtl.transforms.DedupedResult",
+    "original":"~Mult_D_PrimOp|EB_one_1",
+    "duplicate":"~Mult_D_PrimOp|Mult_D_PrimOp/l0_1:D_PrimOp_1_1/EB:EB_one",
     "index":0.1
   },
   {
     "class":"firrtl.transforms.DedupedResult",
-    "original":"~Mult_D_PrimOp|EB_two_1",
-    "duplicate":"~Mult_D_PrimOp|Mult_D_PrimOp/l0_1:D_PrimOp_1_1/EB:EB_two",
+    "original":"~Mult_D_PrimOp|D_PrimOp_1_1",
+    "duplicate":"~Mult_D_PrimOp|Mult_D_PrimOp/l0_1:D_PrimOp_1_1",
+    "index":0.15
+  },
+  {
+    "class":"firrtl.transforms.DedupedResult",
+    "original":"~Mult_D_PrimOp|EB_one_2",
+    "duplicate":"~Mult_D_PrimOp|Mult_D_PrimOp/l0_2:D_PrimOp_1_2/EB:EB_one",
     "index":0.2
   },
   {
     "class":"firrtl.transforms.DedupedResult",
-    "original":"~Mult_D_PrimOp|EB_two_2",
-    "duplicate":"~Mult_D_PrimOp|Mult_D_PrimOp/l0_2:D_PrimOp_1_2/EB:EB_two",
+    "original":"~Mult_D_PrimOp|D_PrimOp_1_2",
+    "duplicate":"~Mult_D_PrimOp|Mult_D_PrimOp/l0_2:D_PrimOp_1_2",
+    "index":0.25
+  },
+  {
+    "class":"firrtl.transforms.DedupedResult",
+    "original":"~Mult_D_PrimOp|EB_one_3",
+    "duplicate":"~Mult_D_PrimOp|Mult_D_PrimOp/l0_3:D_PrimOp_0/EB:EB_one",
+    "index":0.3
+  },
+  {
+    "class":"firrtl.transforms.DedupedResult",
+    "original":"~Mult_D_PrimOp|EB_one_4",
+    "duplicate":"~Mult_D_PrimOp|Mult_D_PrimOp/l0_4:D_PrimOp_1_3/EB:EB_one",
     "index":0.4
   },
   {
     "class":"firrtl.transforms.DedupedResult",
-    "original":"~Mult_D_PrimOp|EB_two_3",
-    "duplicate":"~Mult_D_PrimOp|Mult_D_PrimOp/l1_0:D_PrimOp_1/EB:EB_two",
+    "original":"~Mult_D_PrimOp|EB_one_5",
+    "duplicate":"~Mult_D_PrimOp|Mult_D_PrimOp/l1_0:D_PrimOp_1/EB:EB_one",
+    "index":0.5
+  },
+  {
+    "class":"firrtl.transforms.DedupedResult",
+    "original":"~Mult_D_PrimOp|D_PrimOp_1_4",
+    "duplicate":"~Mult_D_PrimOp|Mult_D_PrimOp/l1_0:D_PrimOp_1",
+    "index":0.55
+  },
+  {
+    "class":"firrtl.transforms.DedupedResult",
+    "original":"~Mult_D_PrimOp|EB_one_6",
+    "duplicate":"~Mult_D_PrimOp|Mult_D_PrimOp/l1_1:D_PrimOp_1_5/EB:EB_one",
     "index":0.6
   },
   {
     "class":"firrtl.transforms.DedupedResult",
-    "original":"~Mult_D_PrimOp|D_PrimOp_1_3",
-    "duplicate":"~Mult_D_PrimOp|Mult_D_PrimOp/l1_0:D_PrimOp_1",
+    "original":"~Mult_D_PrimOp|EB_one_7",
+    "duplicate":"~Mult_D_PrimOp|Mult_D_PrimOp/l1_2:D_PrimOp_1_2/EB:EB_one",
     "index":0.7
   },
   {
     "class":"firrtl.transforms.DedupedResult",
-    "original":"~Mult_D_PrimOp|EB_two_4",
-    "duplicate":"~Mult_D_PrimOp|Mult_D_PrimOp/l1_1:D_PrimOp_1_4/EB:EB_two",
+    "original":"~Mult_D_PrimOp|D_PrimOp_1_6",
+    "duplicate":"~Mult_D_PrimOp|Mult_D_PrimOp/l1_2:D_PrimOp_1_2",
+    "index":0.75
+  },
+  {
+    "class":"firrtl.transforms.DedupedResult",
+    "original":"~Mult_D_PrimOp|EB_one_8",
+    "duplicate":"~Mult_D_PrimOp|Mult_D_PrimOp/l1_3:D_PrimOp_1_7/EB:EB_one",
     "index":0.8
+  },
+  {
+    "class":"firrtl.transforms.DedupedResult",
+    "original":"~Mult_D_PrimOp|EB_one_9",
+    "duplicate":"~Mult_D_PrimOp|Mult_D_PrimOp/l1_4:D_PrimOp_1_1/EB:EB_one",
+    "index":0.9
+  },
+  {
+    "class":"firrtl.transforms.DedupedResult",
+    "original":"~Mult_D_PrimOp|D_PrimOp_1_8",
+    "duplicate":"~Mult_D_PrimOp|Mult_D_PrimOp/l1_4:D_PrimOp_1_1",
+    "index":0.95
   },
   {
     "class":"firrtl.EmitCircuitAnnotation",

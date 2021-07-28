@@ -10,6 +10,23 @@ class D_PrimOp_0(width: Int, f: SInt => SInt) extends Module{
     val out = Decoupled(SInt(width.W))
   })
 
+  val EB = Module(new EB_one(width))
+
+  EB.io.in.bits := f(io.a.bits)
+  EB.io.in.valid := io.a.valid
+  io.a.ready := EB.io.in.ready
+
+  io.out.bits := EB.io.out.bits
+  io.out.valid := EB.io.out.valid
+  EB.io.out.ready := io.out.ready
+}
+
+class D_PrimOp2_0(width: Int, f: SInt => SInt) extends Module{
+  val io = IO(new Bundle {
+    val a = Flipped(Decoupled(SInt(width.W)))
+    val out = Decoupled(SInt(width.W))
+  })
+
   val EB = Module(new EB_two(width))
 
   EB.io.in.bits := f(io.a.bits)
@@ -22,6 +39,25 @@ class D_PrimOp_0(width: Int, f: SInt => SInt) extends Module{
 }
 
 class D_PrimOp_1(width: Int, f: (SInt, SInt) => SInt) extends Module{
+  val io = IO(new Bundle {
+    val a = Flipped(Decoupled(SInt(width.W)))
+    val b = Flipped(Decoupled(SInt(width.W)))
+    val out = Decoupled(SInt(width.W))
+  })
+
+  val EB = Module(new EB_one(width))
+
+  EB.io.in.bits := f(io.a.bits, io.b.bits)
+  EB.io.in.valid := io.a.valid & io.b.valid
+  io.a.ready := EB.io.in.ready
+  io.b.ready := EB.io.in.ready
+
+  io.out.bits := EB.io.out.bits
+  io.out.valid := EB.io.out.valid
+  EB.io.out.ready := io.out.ready
+}
+
+class D_PrimOp2_1(width: Int, f: (SInt, SInt) => SInt) extends Module{
   val io = IO(new Bundle {
     val a = Flipped(Decoupled(SInt(width.W)))
     val b = Flipped(Decoupled(SInt(width.W)))
