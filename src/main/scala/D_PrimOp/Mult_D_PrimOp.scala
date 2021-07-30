@@ -35,6 +35,15 @@ class Mult_D_PrimOp(width: Int) extends Module {
     }
   }
 
+//  // First Layer
+//  val l0_0 = Module(new D_PrimOp_1(width, Prim.sub))
+//
+//  // Connections
+//  conn(io.a, io.b, l0_0)
+//
+//  // The last connection
+//  io.out <> l0_0.io.out
+
   // First Layer
   val l0_0 = Module(new D_PrimOp_1(width, Prim.add))
   val l0_1 = Module(new D_PrimOp_1(width, Prim.mul))
@@ -119,6 +128,15 @@ class Mult_D_PrimOp2(width: Int) extends Module {
       case _ =>
     }
   }
+
+//  // First Layer
+//  val l0_0 = Module(new D_PrimOp2_1(width, Prim.sub))
+//
+//  // Connections
+//  conn(io.a, io.b, l0_0)
+//
+//  // The last connection
+//  io.out <> l0_0.io.out
 
   // First Layer
   val l0_0 = Module(new D_PrimOp2_1(width, Prim.add))
